@@ -1,0 +1,26 @@
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+
+[[plugins]]
+repo = 'vim-syntastic/syntastic'
+hook_add = '''
+   set statusline+=%#warningmsg#
+   set statusline+=%{SyntasticStatuslineFlag()}
+   set statusline+=%*
+   
+   let g:syntastic_always_populate_loc_list = 1
+   let g:syntastic_auto_loc_list = 1
+   let g:syntastic_check_on_open = 1
+   let g:syntastic_check_on_wq = 0
+   '''
+[[plugins]]
+repo    = 'vim-airline/vim-airline'
+depends = ['vim-airline-themes']
+hook_add = 'let g:airline#extensions#tabline#enabled = 1'
+
+#依存関係を指定したからと言って、自動でインストールはされない（ここは NeoBundle と違う）
+[[plugins]]
+repo = 'vim-airline/vim-airline-themes'
+
+[[plugins]]
+repo = 'cohama/lexima.vim'
